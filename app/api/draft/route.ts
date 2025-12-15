@@ -23,5 +23,5 @@ export async function GET(request: NextRequest) {
 	}
 
 	;(await draftMode()).enable()
-	redirect(`/posts/${post.slug}`)
+	redirect(`/posts/${slug}`)
 }
