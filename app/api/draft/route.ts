@@ -19,9 +19,9 @@ export async function GET(request: NextRequest) {
 	const post = await getPostAndMorePosts(slug, true)
 
 	if (!post) {
-		return new Response('Article not found', { status: 404 })
+		return new Response('Post not found', { status: 404 })
 	}
 
 	;(await draftMode()).enable()
-	redirect(`/articles/${post.slug}`)
+	redirect(`/posts/${post.slug}`)
 }
